@@ -1,0 +1,53 @@
+<html>
+    <head>
+
+               <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <h1>Debnath Cafe</h1>
+
+        <div class="content">
+
+            <form id="add-cafe-form">
+                   <input type="text" name="name" placeholder="Cafe Name">
+                   <input type="text" name="city" placeholder="Cafe city">
+                    <button>Add Cafe Info</button>
+            </form>
+
+            <ul id="cafe-list"></ul>
+
+        </div>
+
+ 
+<script>
+ 
+  var firebaseConfig = {
+    apiKey: "AIzaSyDi5_okqwXfakBS6GG6OzoDuZrYh8dVL-4",
+    authDomain: "debnath-cafe.firebaseapp.com",
+    projectId: "debnath-cafe",
+    storageBucket: "debnath-cafe.appspot.com",
+    messagingSenderId: "179977347510",
+    appId: "1:179977347510:web:d8d782f7650ddc75e76117",
+    measurementId: "G-6GZ12ZRGD8"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+//must do steps below //
+  const db=firebase.firestore();
+  db.settings({timestampsInSnapshots:true});
+
+</script>
+
+        <script src="app.js"></script>
+    </body>
+</html>
